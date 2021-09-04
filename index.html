@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="изображения\иконка сайта.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" id="styles" href="styles.css">
+    <link rel="stylesheet" id="modalStyles" href="modalStyles.css">
+    <link rel="stylesheet" id="productModalStyles" href="productModalStyles.css">
+    <!-- <link rel="stylesheet" id="productModalStyles_dark" href="productModalStyles_dark.css"> -->
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Смищные тетради</title>
+
+    <!-- TODO:сделать модалки к товарам
+    это можно сделать сделав каждый пункт товара пустым а добавлять текст через innerHTML -->
+    <!-- TODO:сделать бэкенд -->
+</head>
+<body>
+
+    <div id="content">
+<img src="изображения\Frame 45.png">
+
+<div id="header">
+    <table>
+        <td>
+    <div id="left">
+<span id="aboutUs" ><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" class="bi bi-info" viewBox="0 0 16 16">
+    <path fill="currentColor" d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+  </svg>о нас</span>
+<span id="profileBtn"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+  </svg>профиль</span>
+<span id="cartBtn"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+  </svg>корзина</span>
+    </div>
+</td>
+<td>
+    <div id="right">
+<span id="searchBtn">
+    <input placeholder="поиск">
+    <svg id="searchIcon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+      </svg>
+</span>
+    </div>
+    </td>
+</table>
+
+
+</div>
+
+
+<div id="newsBlock">
+    <img src="изображения\иконка сайта.png" alt="новости">
+</div>
+
+
+
+
+<div id="productsBlock">
+    <table>
+        <td>
+    <div class="product productRow1" id="product1">
+        
+        <img class="productImg" id="productImg1" data-id="product_1_1" src="http://127.0.0.1:5500/%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/%D0%B8%D0%BA%D0%BE%D0%BD%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0.png" alt="смищной товар">
+       
+       <h3 class="productTitle" id="productTitle1">
+            title
+        </h3>
+
+        <table>
+       <td>
+        <h3 class="productPrice" id="productPrice1">
+            0₽
+        </h3>
+    
+    </td>
+    <td>
+        <button id="addCartBtn_1_1" data-id="product_1_1" class="btn btn-primary addCartBtn">в корзину</button>
+    </td>
+        </table>
+    </div>
+    </td>
+    <td>
+    <div class="product productRow2" id="product2">
+        
+        <img class="productImg" id="productImg2" data-id="product_1_2" src="http://127.0.0.1:5500/%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/%D0%B8%D0%BA%D0%BE%D0%BD%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0.png" alt="смищной товар">
+      
+        <h3 class="productTitle" id="productTitle2">
+            title
+        </h3>
+      
+        <table>
+       <td>
+        <h3 class="productPrice" id="productPrice2">
+            0₽
+        </h3>
+    </td>
+    <td>
+        <button onclick="cartAdd()" data-id="product_1_2" class="btn btn-primary addCartBtn">в корзину</button>
+    </td>
+        </table>
+    </div>
+    </td>
+    <td>
+        <div class="product productRow3" id="product3" data-id="product_1_3">
+        
+        <img class="productImg" id="productImg3" src="http://127.0.0.1:5500/%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/%D0%B8%D0%BA%D0%BE%D0%BD%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0.png" alt="смищной товар">
+      
+        <h3 class="productTitle" id="productTitle3">
+            title
+        </h3>
+
+        <table>
+       <td>
+        <h3 class="productPrice" id="productPrice3">
+            0₽
+        </h3>
+    </td>
+    <td>
+        <button onclick="cartAdd()" data-id="product_1_3" class="btn btn-primary addCartBtn">в корзину</button>
+    </td>
+        </table>
+    </div>
+    </td>
+    </table>
+    <table>
+        <td>
+    <div class="product productRow1" id="product4" data-id="product_1_4">
+        
+        <img class="productImg" id="productImg4" src="http://127.0.0.1:5500/%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/%D0%B8%D0%BA%D0%BE%D0%BD%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0.png" alt="смищной товар">
+       
+        <h3 class="productTitle" id="productTitle4">
+            title
+        </h3>
+       
+        <table>
+       <td>
+        <h3 class="productPrice" id="productPrice4">
+            0₽
+        </h3>
+    </td>
+    <td>
+        <button onclick="cartAdd()" class="btn btn-primary addCartBtn">в корзину</button>
+    </td>
+        </table>
+    </div>
+    </td>
+    <td>
+    <div class="product productRow2" data-id="product_1_4" id="product5" data-id="product_1_5">
+        
+        <img class="productImg" id="productImg5" src="http://127.0.0.1:5500/%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/%D0%B8%D0%BA%D0%BE%D0%BD%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0.png" alt="смищной товар">
+       
+        <h3 class="productTitle" id="productTitle5">
+            title
+        </h3>
+
+        <table>
+       <td>
+        <h3 class="productPrice" id="productPrice5">
+            0₽
+        </h3>
+    </td>
+    <td>
+        <button onclick="cartAdd()" data-id="product_1_5" class="btn btn-primary addCartBtn">в корзину</button>
+    </td>
+        </table>
+    </div>
+    </td>
+    <td>
+        <div class="product productRow3" id="product6" data-id="product_1_6">
+        
+        <img class="productImg" id="productImg6" src="http://127.0.0.1:5500/%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/%D0%B8%D0%BA%D0%BE%D0%BD%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0.png" alt="смищной товар">
+      
+        <h3 class="productTitle" id="productTitle6">
+            title
+        </h3>
+      
+        <table>
+       <td>
+        <h3 class="productPrice" id="productPrice6">
+            0₽
+        </h3>
+    
+
+    </td>
+    <td>
+        <button onclick="cartAdd()" data-id="product_1_6" class="btn btn-primary addCartBtn">в корзину</button>
+    </td>
+        </table>
+    </div>
+    </td>
+    </table> <table>
+        <td>
+    <div class="product productRow1" id="product7" data-id="product_1_7">
+        
+        <img class="productImg" id="productImg7" src="http://127.0.0.1:5500/%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/%D0%B8%D0%BA%D0%BE%D0%BD%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0.png" alt="смищной товар">
+      
+        <h3 class="productTitle" id="productTitle7">
+            title
+        </h3>
+
+        <table>
+       <td>
+        <h3 class="productPrice" id="productPrice7">
+            0₽
+        </h3>
+    </td>
+    <td>
+        <button onclick="cartAdd()" data-id="product_1_7" class="btn btn-primary addCartBtn">в корзину</button>
+    </td>
+        </table>
+    </div>
+    </td>
+    <td>
+    <div class="product productRow2" id="product8" data-id="product_1_8">
+        
+        <img class="productImg" id="productImg8" src="http://127.0.0.1:5500/%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/%D0%B8%D0%BA%D0%BE%D0%BD%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0.png" alt="смищной товар">
+       
+        <h3 class="productTitle" id="productTitle8">
+            title
+        </h3>
+       
+        <table>
+       <td>
+        <h3 class="productPrice" id="productPrice8">
+            0₽
+        </h3>
+    </td>
+    <td>
+        <button onclick="cartAdd()" data-id="product_1_8" class="btn btn-primary addCartBtn">в корзину</button>
+    </td>
+        </table>
+    </div>
+    </td>
+    <td>
+        <div class="product productRow3" id="product9" data-id="product_1_9">
+        
+        <img class="productImg" id="productImg9" src="http://127.0.0.1:5500/%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/%D0%B8%D0%BA%D0%BE%D0%BD%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0.png" alt="смищной товар">
+       <table>
+
+        <h3 class="productTitle" id="productTitle9">
+            title
+        </h3>
+       <td>
+        <h3 class="productPrice" id="productPrice9">
+            0₽
+        </h3>
+    
+  
+    </td>
+    <td>
+        <button onclick="cartAdd()" data-id="product_1_9" class="btn btn-primary addCartBtn">в корзину</button>
+    </td>
+        </table> 
+    </div>
+    </td>
+    </table>
+    <div id="hiden">
+    <table>
+    <td>
+    <div class="product productRow1" id="product10" data-id="product_1_10">
+    
+    <img class="productImg" id="productImg10" src="http://127.0.0.1:5500/%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/%D0%B8%D0%BA%D0%BE%D0%BD%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0.png" alt="смищной товар">
+   
+    <h3 class="productTitle" id="productTitle10">
+        title
+    </h3>
+    <table>
+    <td>
+    <h3 class="productPrice" id="productPrice10">
+        0₽
+    </h3>
+    
+
+    </td>
+    <td>
+    <button onclick="cartAdd()" data-id="product_1_10" class="btn btn-primary addCartBtn">в корзину</button>
+    </td>
+    </table>
+    </div>
+    </td>
+    <td>
+    <div class="product productRow2" id="product11" data-id="product_1_11">
+    
+    <img class="productImg" id="productImg11" src="http://127.0.0.1:5500/%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/%D0%B8%D0%BA%D0%BE%D0%BD%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0.png" alt="смищной товар">
+    <h3 class="productTitle" id="productTitle11">
+        title
+    </h3>
+    <table>
+    <td>
+    <h3 class="productPrice" id="productPrice11">
+        0₽
+    </h3>
+    </td>
+    <td>
+    <button onclick="cartAdd()" data-id="product_1_11" class="btn btn-primary addCartBtn">в корзину</button>
+    </td>
+    </table>
+    </div>
+    </td>
+    <td>
+    <div class="product productRow3" id="product12" data-id="product_1_12">
+    
+    <img class="productImg" id="productImg12" src="http://127.0.0.1:5500/%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/%D0%B8%D0%BA%D0%BE%D0%BD%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0.png" alt="смищной товар">
+    
+    <h3 class="productTitle" id="productTitle12">
+        title
+    </h3>
+    <table>
+    <td>
+    <h3 class="productPrice" id="productPrice12">
+        0₽
+    </h3>
+    </td>
+    <td>
+    <button onclick="cartAdd()" data-id="product_1_12" class="btn btn-primary addCartBtn">вz корзину</button>
+    </td>
+    </table>
+    </div>
+    </td>
+    </table>
+    <table>
+    <td>
+    <div class="product productRow1" id="product13" data-id="product_1_13">
+    
+    <img class="productImg" id="productImg13" src="http://127.0.0.1:5500/%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/%D0%B8%D0%BA%D0%BE%D0%BD%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0.png" alt="смищной товар">
+    
+    <h3 class="productTitle" id="productTitle13">
+        title
+    </h3>
+    <table>
+    <td>
+    <h3 class="productPrice" id="productPrice13">
+        0₽
+    </h3>
+    </td>
+    <td>
+    <button onclick="cartAdd()" data-id="product_1_13" class="btn btn-primary addCartBtn">в корзину</button>
+    </td>
+    </table>
+    </div>
+    </td>
+    <td>
+    <div class="product productRow2" id="product14" data-id="product_1_14">
+    
+    <img class="productImg" id="productImg14" src="http://127.0.0.1:5500/%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/%D0%B8%D0%BA%D0%BE%D0%BD%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0.png" alt="смищной товар">
+    
+    <h3 class="productTitle" id="productTitle14">
+        title
+    </h3>
+    <table>
+    <td>
+    <h3 class="productPrice" id="productPrice14">
+        0₽
+    </h3>
+    </td>
+    <td>
+    <button onclick="cartAdd()" data-id="product_1_14" class="btn btn-primary addCartBtn">в корзину</button>
+    </td>
+    </table>
+    </div>
+    </td>
+    <td>
+    <div class="product productRow3" id="product15" data-id="product_1_15">
+    
+    <img class="productImg" id="productImg15" src="http://127.0.0.1:5500/%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/%D0%B8%D0%BA%D0%BE%D0%BD%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0.png" alt="смищной товар">
+   
+    <h3 class="productTitle" id="productTitle15">
+        title
+    </h3>
+    <table>
+    <td>
+    <h3 class="productPrice" id="productPrice15">
+        0₽
+    </h3>
+    </td>
+    <td>
+    <button onclick="cartAdd()" data-id="product_1_15" class="btn btn-primary addCartBtn">в корзину</button>
+    </td>
+    </table>
+    </div>
+    </td>
+    </table>
+    </div>
+    
+<!-- модальное окно продукта -->
+    
+    <div id="productModal">
+        <div id="productModalContent">
+            <div id="productModalTable">
+                <h1 id="modalProductCrosshair">&times;</h1>
+                <table>
+                    <td>
+                       
+                        <img id="productModalImg" src="" alt="пиво" >
+                       
+                    </td>
+                    <td id="modalProductInfo">
+                        <div id="modalProductTitle">
+                        <h1>
+                            title
+                        </h1>
+                        </div>
+                        <div id="productModalDescrption">
+                        <p id="productModalDescription">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero pariatur incidunt dignissimos illo voluptatum, inventore officia, dolorem nulla explicabo ratione, vel omnis unde. Error dignissimos vero laudantium officia quos cupiditate totam pariatur quis debitis itaque soluta aliquid, amet sint culpa omnis quam deserunt quae ea reprehenderit porro et. Ullam quo ab a consequuntur unde. Inventore sapiente asperiores quae voluptate totam aspernatur dolor, voluptates ipsum nostrum doloribus corporis in. Quos exercitationem, itaque doloribus similique perspiciatis obcaecati autem officiis nihil, sit totam fugit ad? Dolorem animi aliquam, eos sint facere expedita vel incidunt praesentium mollitia soluta repudiandae nulla eius ut, ducimus rem.
+                        </p>
+                        </div>
+                        <div id="productModalPrice">
+                        <h3>
+                            productModalPrice
+                        </h3>
+                        </div>
+                    </td>
+                </table>
+
+            </div>
+            <div id="productModalBtns">
+                <button type="button" id="modalCartAdd" class="btn btn-primary">Добавить в корзину</button>    
+                <button type="button" id="modalBuyNow" class="btn btn-outline-primary">Купить сейчас</button>
+            </div>
+        </div>
+   </div>
+
+
+    <button onclick="showMore()" class="showMore" id="showMore">
+    <h5>показать больше</h5>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+          </svg>
+    </button>
+</div>
+    
+<div id="footer">
+    <h5 class="footerText">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+          </svg>
+    почта: wodichquestudio@gmail.com
+    </h5>
+    <h5 class="footerText">
+        
+        <a href="https://vk.com/xbibibibi" target="_blank">
+            <svg id="vkIcon" width="16" height="16" fill='currentColor' viewBox="0 0 24 24"><path class="st0" d="M13.162 18.994c.609 0 .858-.406.851-.915-.031-1.917.714-2.949 2.059-1.604 1.488 1.488 1.796 2.519 3.603 2.519h3.2c.808 0 1.126-.26 1.126-.668 0-.863-1.421-2.386-2.625-3.504-1.686-1.565-1.765-1.602-.313-3.486 1.801-2.339 4.157-5.336 2.073-5.336h-3.981c-.772 0-.828.435-1.103 1.083-.995 2.347-2.886 5.387-3.604 4.922-.751-.485-.407-2.406-.35-5.261.015-.754.011-1.271-1.141-1.539-.629-.145-1.241-.205-1.809-.205-2.273 0-3.841.953-2.95 1.119 1.571.293 1.42 3.692 1.054 5.16-.638 2.556-3.036-2.024-4.035-4.305-.241-.548-.315-.974-1.175-.974h-3.255c-.492 0-.787.16-.787.516 0 .602 2.96 6.72 5.786 9.77 2.756 2.975 5.48 2.708 7.376 2.708z"/></svg>
+        ВКонтакте
+    </a>
+    </h5>
+    <h5 class="footerText">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+          </svg>
+        <a href="https://www.instagram.com/smischnie_tetradi/?hl=ru" target="_blank">
+        Инстаграм
+    </a>
+    </h5>
+    <hr class="hrVert">
+
+    <h5 id='rightFooter'>сайт разработан IT-отделом Wodichque Studio</h5>
+</div>
+
+<div class="modalWindow" id="aboutUsModal">
+    <h1 class="modalTitle"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-info-lg" viewBox="0 0 16 16">
+         <path d="m10.277 5.433-4.031.505-.145.67.794.145c.516.123.619.309.505.824L6.101 13.68c-.34 1.578.186 2.32 1.423 2.32.959 0 2.072-.443 2.577-1.052l.155-.732c-.35.31-.866.434-1.206.434-.485 0-.66-.34-.536-.939l1.763-8.278zm.122-3.673a1.76 1.76 0 1 1-3.52 0 1.76 1.76 0 0 1 3.52 0z"/>
+       </svg>о нас</h1>
+       <svg class="crosshair" id="aboutUsCrosshair" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+         <path d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"/>
+       </svg>
+       <hr class="modalHr">
+       <div class="modalContent">
+           <h4>
+             В преддверии учебного года всегда возникают проблемы с покупками тетрадей. Всегда возникает дилемма - взять ли дорогую, но качественную тетрадь с красивым принтом, либо плохого качества но зато дешевые. Мы производим качественные тетради, цена которых, превышает себестоимость лишь на 5% процентов за одну тетрадь.
+             Короче мы тупа делаем тетради с мемами на обложках
+           </h4>
+       </div>
+ </div>
+ 
+
+<div class="modalWindow" id="profileModal">
+    <h1 class="modalTitle"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+      </svg>профиль</h1>
+       <svg class="crosshair" id="profileCrosshair" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+         <path d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"/>
+       </svg>
+       <hr class="modalHr">
+       <div class="modalContent">
+           <div id="adressBlock">
+               <h4>фио: <span id="fullName"></span></h4>
+               <h4>адресс: <span id="adress"></span></h4>
+           </div>
+           <table>
+               <td>
+                   <div id="paymentVars" class="profileOptions">
+                       <h2 class="optionsText" id="paymentVarsText">способы оплаты</h2>
+                   </div>
+                <td>
+                   <div id="orders" class="profileOptions rightProfileOptions">
+                        <h2 class="optionsText"  id="ordersText">заказы</h2>
+                    </div>
+                </td>
+               </td>
+           </table>
+
+           <table>
+            <td>
+                <div id="refunds" class="profileOptions">
+                    <h2 class="optionsText"  id="refundsText">возвраты</h2>
+                </div>
+             <td>
+                <div id="themeSwitcher" class="profileOptions rightProfileOptions">
+                     <h2 class="optionsText" id="themeSwitchText">поменять тему</h2>
+                 </div>
+             </td>
+            </td>
+        </table>
+       </div>
+ </div>
+
+ <!-- TODO: переделать шоумор 
+добавить все товары в хтмл сделать дисплей нон и подкрутить скрипт шо при нажатии шоумор стиль дисплей продуктов будет блок
+-->
+
+<div class="modalWindow" id="cartModal">
+    <h1 class="modalTitle"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+      </svg>корзина</h1>
+       <svg class="crosshair" id="cartCrosshair" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+         <path d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"/>
+       </svg>
+       <hr class="modalHr">
+       <div class="modalContent">
+            <div id="cartContent">
+                <p id="thereNothing">пока что пусто</p>
+                            </div>
+            <button class="btn btn-primary" id="orderBtn" type="submit">заказать</button>
+        </div>
+       </div>
+
+ </div>
+
+    </div>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="scripts\productsData.js"></script>
+    <script src="scripts\themeSwitch.js"></script>
+    <script src="scripts\modals.js"></script>
+    <script src="scripts\showmore.js"></script>
+    <script src="scripts\productPhotos.js"></script>
+    <script src="scripts\productModal.js"></script>
+    <script src="miniProduct.js"></script>
+    <script src="scripts\addCart_1.js"></script>
+    <script src="scripts\addCart_2.js"></script>
+</body>
+</html>
